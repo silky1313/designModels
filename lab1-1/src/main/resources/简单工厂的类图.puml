@@ -1,0 +1,27 @@
+@startuml
+
+class Client
+class OperationFactory{
+ <<static>> +createOperate()
+}
+class Operation {
+<<abstract>>
+    - numberA
+    - numberB
+	+GetResult()    
+}
+class OperationAdd
+class OperationSub
+class OperationMul
+class OperationDiv
+
+Operation <|.. OperationAdd
+Operation <|.. OperationSub
+Operation <|.. OperationMul
+Operation <|.. OperationDiv
+
+OperationFactory *-- Operation
+Client ..> OperationFactory
+
+@enduml
+

@@ -1,0 +1,15 @@
+@startuml
+
+interface DataOperation{
+    +sort()
+    +search()
+}
+
+Client ..> DataOperation
+
+DataOperation <|.. Adapter
+
+Adapter ..> QuickSort
+Adapter ..> BinarySearch
+@enduml
+

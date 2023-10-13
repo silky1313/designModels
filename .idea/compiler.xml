@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="000" />
+        <module name="_001simplefactory" />
+        <module name="lab1-5" />
+        <module name="lab1-4" />
+        <module name="lab1-3" />
+        <module name="lab2-2" />
+        <module name="__002strategypattern" />
+        <module name="lab1-2" />
+        <module name="lab2-1" />
+        <module name="lab1-1" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="11">
+      <module name="000" target="11" />
+      <module name="_001simplefactory" target="11" />
+      <module name="__002strategypattern" target="11" />
+      <module name="BLOG" target="11" />
+      <module name="lab1" target="11" />
+      <module name="lab1-1" target="11" />
+      <module name="lab1-2" target="11" />
+      <module name="lab1-3" target="11" />
+      <module name="lab1-4" target="11" />
+      <module name="lab1-5" target="11" />
+      <module name="lab2-1" target="11" />
+      <module name="lab2-2" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BLOG" options="-parameters" />
+    </option>
+  </component>
+</project>

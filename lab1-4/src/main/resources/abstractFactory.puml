@@ -1,0 +1,41 @@
+@startuml
+
+class Client
+
+interface SqlFactory{
+    +createConnection()
+    +createStatement()
+}
+class MysqlFactory
+class OracleFactory
+
+abstract Connection
+abstract Statement
+
+class MysqlConnection
+class MysqlStatement
+
+class OracleConnection
+class OracleStatement
+
+Client --> SqlFactory
+
+SqlFactory <|.. MysqlFactory
+SqlFactory <|.. OracleFactory
+
+MysqlConnection <|-- Connection
+MysqlStatement <|-- Statement
+
+OracleConnection <|-- Connection
+OracleStatement <|-- Statement
+
+MysqlConnection <.. MysqlFactory
+MysqlStatement <.. MysqlFactory
+
+OracleConnection <.. OracleFactory
+OracleStatement <.. OracleFactory
+
+
+
+@enduml
+
