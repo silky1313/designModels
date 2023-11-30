@@ -1,0 +1,18 @@
+@startuml
+
+Abstract class BasicFormat
+Abstract class BasicDataBase
+
+Client --> BasicFormat
+
+BasicFormat <|-- XML
+BasicFormat <|-- PDF
+BasicFormat <|-- TXT
+
+BasicDataBase <|.. Mysql
+BasicDataBase <|.. MongoDB
+
+BasicFormat <.. BasicDataBase
+
+@enduml
+

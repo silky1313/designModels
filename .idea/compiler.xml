@@ -9,7 +9,9 @@
         <module name="000" />
         <module name="_001simplefactory" />
         <module name="lab1-5" />
+        <module name="lab2-4" />
         <module name="lab1-4" />
+        <module name="lab2-3" />
         <module name="lab1-3" />
         <module name="lab2-2" />
         <module name="__002strategypattern" />
@@ -19,18 +21,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
-      <module name="000" target="11" />
-      <module name="_001simplefactory" target="11" />
       <module name="__002strategypattern" target="11" />
       <module name="BLOG" target="11" />
-      <module name="lab1" target="11" />
-      <module name="lab1-1" target="11" />
-      <module name="lab1-2" target="11" />
-      <module name="lab1-3" target="11" />
-      <module name="lab1-4" target="11" />
-      <module name="lab1-5" target="11" />
-      <module name="lab2-1" target="11" />
-      <module name="lab2-2" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

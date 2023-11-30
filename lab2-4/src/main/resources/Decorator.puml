@@ -1,0 +1,41 @@
+@startuml
+
+interface EncipherComponent {
+    + encipherString(String code)
+}
+
+class EncipherDecorator {
+    - EncipherDecorator
+    + EncipherDecorator(encipherDecorator : EncipherDecorator)
+
+    + encipherString(String code)
+}
+
+
+class EncipherFirstDecorator {
+    - EncipherDecorator
+
+    + EncipherFirstDecorator(encipherDecorator : EncipherDecorator)
+    + encipherString(code : String)
+    - encipherStringSelf(code : String)
+}
+
+class EncipherSecondDecorator {
+    - EncipherDecorator
+
+    + EncipherFirstDecorator(encipherDecorator : EncipherDecorator)
+    + encipherString(code : String)
+    - encipherStringSelf(code : String)
+}
+
+class EncipherThirdDecorator {
+    - EncipherDecorator
+
+    + EncipherFirstDecorator(encipherDecorator : EncipherDecorator)
+    + encipherString(code : String)
+    - encipherStringSelf(code : String)
+}
+
+@enduml
+
+

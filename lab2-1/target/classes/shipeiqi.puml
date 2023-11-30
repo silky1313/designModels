@@ -5,11 +5,11 @@ interface DataOperation{
     +search()
 }
 
-Client --> DataOperation
+Client ..> DataOperation
 
-DataOperation <|-- Adapter
+DataOperation <|.. Adapter
 
-Adapter --> QuickSort
-Adapter --> BinarySearch
+Adapter ..> QuickSort
+Adapter ..> BinarySearch
 @enduml
 
