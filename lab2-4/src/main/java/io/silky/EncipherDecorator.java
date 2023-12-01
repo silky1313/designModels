@@ -1,12 +1,14 @@
 package io.silky;
 
-public class EncipherDecorator implements EncipherComponent{
-    EncipherDecorator encipherDecorator;
+public abstract class EncipherDecorator implements EncipherComponent {
+    private EncipherComponent component;
 
-   public EncipherDecorator
+    public EncipherDecorator(EncipherComponent component) {
+        this.component = component;
+    }
 
     @Override
     public String encipherString(String code) {
-        System.out.println("对密码进行加密");
+        return component.encipherString(code);
     }
 }

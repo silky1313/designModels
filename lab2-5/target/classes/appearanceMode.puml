@@ -1,0 +1,35 @@
+
+@startuml
+
+class client
+
+class OpenButton {
+    + openSystem ()
+}
+
+class Memory {
+    + checkMemory ()
+}
+
+class Cpu {
+    + run ()
+}
+
+class HardDisk {
+    + read ()
+}
+
+class OperatingSystem{
+    + load ()
+}
+client ..> OpenButton
+
+OpenButton ..> Memory
+
+OpenButton ..> Cpu
+
+OpenButton ..> HardDisk
+
+OpenButton ..> OperatingSystem
+
+@enduml
