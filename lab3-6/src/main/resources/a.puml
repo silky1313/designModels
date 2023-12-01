@@ -1,0 +1,55 @@
+@startuml
+
+class Player {
+    + state: State
+    + value: Integer
+    + play(): void
+    + doubleScore(): void
+    + changeCards(): void
+    + peekCards(): void
+    + changeState(): void
+}
+
+abstract State {
+    + abstract play(): void
+    + abstract doubleScore(): void
+    + abstract changeCards(): void
+    + abstract peekCards(): void
+}
+
+class PrimaryState {
+    + play(): void
+    + doubleScore(): void
+    + changeCards(): void
+    + peekCards(): void
+}
+
+class SecondaryState {
+    + play(): void
+    + doubleScore(): void
+    + changeCards(): void
+    + peekCards(): void
+}
+
+
+class ProfessionalState {
+    + play(): void
+    + doubleScore(): void
+    + changeCards(): void
+    + peekCards(): void
+}
+
+class FinalState {
+    + play(): void
+    + doubleScore(): void
+    + changeCards(): void
+    + peekCards(): void
+}
+
+PrimaryState --|> State
+SecondaryState --|> State
+ProfessionalState --|> State
+FinalState --|> State
+
+Player --* State
+@enduml

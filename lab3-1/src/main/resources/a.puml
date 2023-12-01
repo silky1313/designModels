@@ -1,0 +1,33 @@
+@startuml
+
+abstract SearchContext{
+    Context: List<Integer>
+    next: SearchContext
+    - contextInit() : void
+    + static link(head: SearchContext, body: SearchContext...) : SearchContext
+    + check(content : Integer) : boolean
+    - checkNext(content : Integer) :  boolean
+}
+
+class Server {
+    - SearchContext list;
+    + find() : boolean;
+}
+
+class JavaSearchContext {
+    + findContext() : boolean
+    + hasNext() : boolean
+}
+
+class SQLSearchContext {
+    + findContext() : boolean
+    + hasNext() : boolean
+}
+
+class UMLSearchContext {
+    + findContext() : boolean
+    + hasNext() : boolean
+}
+
+
+@enduml
