@@ -1,3 +1,5 @@
+package io.silky;
+
 public class Main {
     public static void main(String[] args) {
         EncipherComponent component = new EncipherConcreteComponent();
