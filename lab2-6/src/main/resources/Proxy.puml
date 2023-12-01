@@ -1,0 +1,19 @@
+@startuml
+
+class Service {
+    + getUserId(): Integer
+    + getUserName(): String
+}
+
+class ServiceInterceptor {
+    + intercept(): Object
+}
+
+class ProxyFactory {
+    + static getProxy(clazz: Class): Object
+}
+
+ServiceInterceptor ..> ProxyFactory
+Service --> ServiceInterceptor
+
+@enduml
