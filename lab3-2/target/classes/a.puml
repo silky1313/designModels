@@ -1,0 +1,35 @@
+@startuml
+
+interface Command {
+  + execute(): void
+  + undo(): void
+  + redo(): void
+}
+
+class AddCommand {
+  - receiver: Calculator
+  - operand: int
+  + execute(): void
+  + undo(): void
+  + redo(): void
+}
+
+
+class Calculator {
+  + add(operand: int): void
+  + subtract(operand: int): void
+}
+
+class CommandHistory {
+  - commands: List<Command>
+  + executeCommand(command: Command): void
+  + undo(): void
+  + redo(): void
+}
+
+Command <|.. AddCommand
+
+AddCommand --> Calculator
+CommandHistory --> Command
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+
+interface MyIterator<T> {
+  hasNext(): boolean
+  next(): T
+  hasPrevious(): boolean
+  previous(): T
+}
+
+class ProductIterator<String> {
+    hasNext(): boolean
+    next(): String
+    hasPrevious(): boolean
+    previous(): String
+}
+
+class ProductManager {
+  - products: String[]
+  + iterator(): Iterator
+}
+
+MyIterator <|.. ProductIterator
+ProductManager *-- ProductIterator
+
+
+@enduml
