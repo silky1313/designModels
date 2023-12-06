@@ -1,0 +1,35 @@
+@startuml
+
+interface Subject {
+    + attach(observer: Observer): void
+    + detach(observer: Observer): void
+    + notifyObservers(): void
+}
+
+interface Observer {
+    + update(price: double): void
+}
+
+class StockMarket implements Subject {
+    - observers: List<Observer>
+    - stockInitPrice: double
+    - stockNowPrice: double
+    + attach(observer: Observer): void
+    + detach(observer: Observer): void
+    + notifyObservers(): void
+    + stockInitPrice(price: double): void
+    + stockInitPrice(): double
+    + stockNowPrice(price: double): void
+    + stockNowPrice(): double
+}
+
+class StockBuyer implements Observer {
+    - name: String
+    + StockBuyer(name: String)
+    + update(price: double): void
+}
+
+Subject  -->  Observer
+StockMarket *-- StockBuyer
+
+@enduml

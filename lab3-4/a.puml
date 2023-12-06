@@ -1,0 +1,51 @@
+@startuml
+
+interface ChatRoomMediator {
+    + sendMessage(message: String, sender: Member): void
+    + sendImage(image: Image, sender: Member): void
+    + notify(message: String, sender: Member): void
+}
+
+class ChatRoom {
+    - members: List<Member>
+    + registerMember(member: Member): void
+    + sendMessage(message: String, sender: Member): void
+    + sendImage(image: Image, sender: Member): void
+    + notify(message: String, sender: Member): void
+    + filterMessage(message: String): String
+    + limitImageSize(image: Image): Image
+}
+
+abstract class Member {
+    - name: String
+    - chatRoom: ChatRoomMediator
+    + setChatRoom(chatRoom: ChatRoomMediator): void
+    + sendMessage(message: String): void
+    + sendImage(image: Image): void
+    + receiveMessage(message: String, sender: Member): void
+}
+
+class TextMember {
+    + receiveMessage(message: String, sender: Member): void
+}
+
+class ImageMember {
+    + receiveMessage(message: String, sender: Member): void
+}
+
+class Image {
+    - name: String
+    - size: int
+    + getName(): String
+    + getSize(): int
+}
+
+ChatRoomMediator <|.. ChatRoom
+ChatRoomMediator <|-- Member
+ChatRoomMediator <|-- TextMember
+ChatRoomMediator <|-- ImageMember
+ChatRoomMediator <|-- Image
+ChatRoom -- Image:sizeRestriction
+ChatRoom -- TextMember:textFilter
+
+@enduml
