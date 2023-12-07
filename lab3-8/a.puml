@@ -1,0 +1,20 @@
+@startuml
+
+abstract class DatabaseTemplate {
+    + void templateMethod()
+    + abstract void connDB()
+    + void openDB()
+    + void useDB()
+    + void closeDB()
+}
+
+class SQLServerDatabase extends DatabaseTemplate {
+    + void connDB()
+}
+
+class OracleDatabase extends DatabaseTemplate {
+    + void connDB()
+}
+
+
+@enduml

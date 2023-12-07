@@ -1,0 +1,30 @@
+@startuml
+
+interface SortingStrategy {
+    + void sort(int[] data)
+}
+
+class SelectionSortStrategy {
+    + void sort(int[] data)
+}
+
+class InsertionSortStrategy {
+    + void sort(int[] data)
+}
+
+class QuickSortStrategy {
+    + void sort(int[] data)
+}
+
+class SortContext {
+    - SortingStrategy strategy
+    + void setStrategy(SortingStrategy strategy)
+    + void sortData(int[] data)
+}
+
+SortContext  -->  SortingStrategy
+SortingStrategy <|.. SelectionSortStrategy
+SortingStrategy <|.. InsertionSortStrategy
+SortingStrategy <|.. QuickSortStrategy
+
+@enduml
