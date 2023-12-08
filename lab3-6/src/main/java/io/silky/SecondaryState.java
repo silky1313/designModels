@@ -1,23 +1,25 @@
 package io.silky;
 
-public class SecondaryState extends State{
+public class SecondaryState extends State {
     @Override
     public Integer play() {
-        return null;
+        System.out.println("i will play with you");
+        Boolean success = Utils.getRandomBoolean();
+        return success ? 1 : 0;
     }
 
     @Override
-    public double doubleScore(Integer value) {
-        return 0;
+    public Integer doubleScore(Integer value) {
+        return value * 2;
     }
 
     @Override
     public void changeCards() {
-
+        System.out.println("sorry, i can't supply this function");
     }
 
     @Override
     public void peekCards() {
-
+        System.out.println("sorry, i can't supply this function");
     }
 }

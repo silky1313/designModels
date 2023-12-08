@@ -5,8 +5,13 @@ import java.util.Random;
 
 public class Utils {
 
-    public static Random random = new Random();
+    private static final Random RANDOM = new Random();
+
     public static Boolean getRandomBoolean() {
-        return random.nextBoolean();
+        return RANDOM.nextBoolean();
+    }
+
+    public static Integer getRandomInteger(int r) {
+        return RANDOM.nextInt(r);
     }
 }

@@ -1,8 +1,7 @@
 package io.silky;
 
-import java.util.Random;
 
-public class PrimaryState extends State{
+public class PrimaryState extends State {
     @Override
     public Integer play() {
         System.out.println("i will play with you");
@@ -12,16 +11,17 @@ public class PrimaryState extends State{
 
     @Override
     public Integer doubleScore(Integer value) {
-        System.out.println("sorry, i'm");
+        System.out.println("sorry, i can't supply this function");
+        return 0;
     }
 
     @Override
     public void changeCards() {
-
+        System.out.println("sorry, i can't supply this function");
     }
 
     @Override
     public void peekCards() {
-
+        System.out.println("sorry, i can't supply this function");
     }
 }

@@ -13,7 +13,7 @@ public abstract class SearchContext {
 
     public static SearchContext link(SearchContext head, SearchContext... body) {
         SearchContext result = head;
-        for(SearchContext nextNode : body) {
+        for (SearchContext nextNode : body) {
             head.next = nextNode;
             head = nextNode;
         }
@@ -23,7 +23,7 @@ public abstract class SearchContext {
     public abstract boolean check(Integer content);
 
     protected boolean checkNext(Integer content) {
-        if(next == null) return false;
+        if (next == null) return false;
         return next.check(content);
     }
 }

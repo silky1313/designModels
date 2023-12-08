@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class DataOperationAdapter implements DataOperation{
+public class DataOperationAdapter implements DataOperation {
     public BinarySearch binarySearch;
     public QuickSort quickSort;
 
-    public DataOperationAdapter(){
+    public DataOperationAdapter() {
         binarySearch = new BinarySearch();
         quickSort = new QuickSort();
     }
@@ -16,7 +16,7 @@ public class DataOperationAdapter implements DataOperation{
     }
 
     @Override
-    public Integer search(ArrayList<Integer>array, Integer value) {
+    public Integer search(ArrayList<Integer> array, Integer value) {
         return binarySearch.binarySearch(array, value);
     }
 }

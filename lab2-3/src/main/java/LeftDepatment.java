@@ -7,7 +7,7 @@ public class LeftDepatment implements BaseDepartment {
 
     @Override
     public void send(int tabs) {
-        for(int i = 0; i < tabs; i++){
+        for (int i = 0; i < tabs; i++) {
             System.out.print("\t");
         }
         System.out.println("msg is: " + msg);

@@ -2,7 +2,7 @@ package io.silky;
 
 public class Player {
     private State state;
-    private Integer value;
+    private Integer value = 0;
     Player() {
         state = new PrimaryState();
         value = 0;
